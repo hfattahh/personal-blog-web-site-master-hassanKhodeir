@@ -1,0 +1,81 @@
+.content{
+  grid-area: content;
+  /* border: 3px solid red; */
+  display: grid;
+  grid-template-columns:5vw 1fr 5vw;
+  grid-template-rows: repeat(4,minmax(350,1fr));
+  gap: 6px;
+  grid-template-areas:
+  ". post1 ."
+  ". post2 ."
+  ". post3 ."
+  ". post4 .";
+}
+/* for large screens */
+@media(min-width: 900px){
+  .content{
+    grid-area: content;
+    /* border: 3px solid red; */
+    display: grid;
+    grid-template-columns:8vw 1fr 1fr 8vw;
+    grid-template-rows: repeat(2,minmax(350,1fr));
+    gap: 10px;
+    grid-template-areas:
+    ". post1 post2 ."
+    ". post3 post4 ."
+
+  }
+
+}
+#post1-grid{
+  grid-area: post1;
+}
+#post2-grid{
+  grid-area: post2;
+}
+#post3-grid{
+  grid-area: post3;
+}
+#post4-grid{
+  grid-area: post4;
+}
+.card {
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  background-color:#efefef;
+  border-radius: 1vw;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(255,255,255,1);
+  cursor:pointer;
+  background-color: #537084;
+}
+
+.card-text {
+	width: 100%;
+  padding: 2px 16px;
+  margin: 0.2em 0;
+  color:black;
+}
+
+.card-img{
+  height: 40vh;
+  /* border:2px solid yellow; */
+  border-top-left-radius:1vw;
+  border-top-right-radius:1vw;
+  background-position: center;
+  background-size: cover;
+}
+#post1-background{
+  background-image: url("../img/robot1.png");
+}
+#post2-background{
+  background-image: url("../img/robot2.png");
+}#post3-background{
+  background-image: url("../img/robot3.png");
+}
+#post4-background{
+  background-image: url("../img/robot4.png");
+}

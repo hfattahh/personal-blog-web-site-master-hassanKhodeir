@@ -1,0 +1,118 @@
+@import "layout.css";
+@import "nav.css";
+@import "ft.css";
+
+
+
+.grid-container{
+  min-height: 100vh;
+  max-width:100 vw;
+  display:grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns:1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 6px;
+  grid-template-areas:
+  "nav"
+  "post-body"
+  "ft";
+}
+
+.post-body{
+  grid-area: post-body ;
+  display: grid;
+  grid-template-columns:8vw 1fr 8vw;
+  grid-template-rows: 1fr 3fr;
+  gap: 6px;
+  grid-template-areas:
+  "hd hd hd"
+  ". ar .";
+}
+
+/* for large screens */
+@media(min-width: 900px){
+  .post-body{
+    grid-area: post-body ;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 6px;
+    grid-template-areas:
+    "hd ar"
+    "hd ar";
+  }
+}
+
+#post-body-background{
+      /* background-color: #b5b5b5; */
+      background-color: #d6d4d4;
+}
+/* NOTE: never */
+header {
+  grid-area: hd;
+  width:100%;
+  height: auto;
+  background-image: url("../img/kuka-header.jpg");
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+article{
+  grid-area: ar;
+}
+  .meta{
+    text-align: center;
+    color:
+  }
+
+  .meta p{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: -10px;
+  }
+
+  /* NOTE: author-info */
+
+  .author-info {
+    width: 100%;
+    height: auto;
+    background-color: #86a578;
+    padding: 10px;
+    display: flex;
+    flex-flow: column ;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .circle-frame {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    border-radius: 50%;
+    padding: 10px 20px;
+  }
+
+  .author-info-img {
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    min-width: 100px;
+    max-width: 200px;
+    object-fit: cover;
+    padding: 0 2vw 0 2vw;
+  }
+  .blog-article {
+    padding: 0 2vw 1vh 2vw;
+    margin: auto;
+  }
+  .blog-article img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  .blog-article p{
+    color: #54585b;
+  }

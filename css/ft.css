@@ -1,0 +1,36 @@
+footer{
+  grid-area: ft;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 5px;
+
+  /* text-align: center; */
+
+  /* TODO: make the fotter still in the bottom by grid only without position,
+  even that the content was empty */
+  /* okay i just solve it by set the min-height: 100% or height: 100vh;
+  in the grid-container  */
+  /* position: absolute;
+  bottom: 0px; */
+}
+
+.icon-box{
+  margin: 0.1em;
+  padding: 0.1em;
+  color: #efefef
+}
+
+.fab{
+  padding: 5px;
+  color:#efefef;
+}
+#Copyright-box{
+  margin: 0.1em;
+  padding: 0.1em;
+}
+#copyright{
+  color:#efefef;
+}

@@ -1,0 +1,19 @@
+@import "layout.css";
+@import "nav.css";
+@import "ft.css";
+@import "homePage-content.css";
+
+.grid-container{
+  min-height: 100vh;
+  max-width:100 vw;
+  display:grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns:1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 6px;
+  grid-template-areas:
+  "nav"
+  "content"
+  "ft";
+}
